@@ -1,0 +1,119 @@
+<div class="card">
+  <div class="card-header">
+
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <form class="example-form" [formGroup]="formGroup" (ngSubmit)="save()">
+      <table class="example-full-width" cellspacing="0">
+        <mat-form-field class="example-full-width">
+          <mat-label>First name</mat-label>
+          <input matInput formControlName="first_name" />
+        </mat-form-field>
+      </table>
+
+      <table class="example-full-width" cellspacing="0">
+        <mat-form-field class="example-full-width">
+          <mat-label>Last Name </mat-label>
+          <input matInput formControlName="last_name" />
+        </mat-form-field>
+      </table>
+
+      <mat-form-field>
+        <mat-label>Choose a your birthday</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="age" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br />
+      <br />
+      <table>
+        <mat-form-field>
+          <mat-label>Gendar</mat-label>
+          <mat-select formControlName="gendar">
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </table>
+
+      <table>
+        <mat-form-field>
+          <mat-label>Blood type</mat-label>
+          <mat-select formControlName="btype">
+            <mat-option value="A+">A+</mat-option>
+            <mat-option value="A-">A-</mat-option>
+            <mat-option value="B+">B+</mat-option>
+            <mat-option value="B-">B-</mat-option>
+            <mat-option value="AB+">AB+</mat-option>
+            <mat-option value="AB-">AB-</mat-option>
+            <mat-option value="O+">O+</mat-option>
+            <mat-option value="O-">O-</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </table>
+      <table>
+        <mat-form-field class="example-full-width">
+          <mat-label>Telephone</mat-label>
+          <span matTextPrefix>+94 &nbsp;</span>
+          <input
+            type="tel"
+            matInput
+            placeholder="77 878 6758"
+            formControlName="mobile"
+          />
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+      </table>
+
+      <p>
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <textarea
+            matInput
+            placeholder="Ex. 100 Main St"
+            formControlName="addr"
+          ></textarea>
+        </mat-form-field>
+      </p>
+
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>City</mat-label>
+              <input
+                matInput
+                placeholder="Ex. Piliyandala"
+                formControlName="city"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Province</mat-label>
+              <input
+                matInput
+                placeholder="Ex. Western province"
+                formControlName="province"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <section>
+        <div class="example-button-row">
+          <button mat-flat-button type="submit">submit</button>
+        </div>
+      </section>
+    </form>
+    <br />
+  </mat-card-content>
+</mat-card>
+</div>
+</div>

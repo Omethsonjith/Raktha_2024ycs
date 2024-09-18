@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 mt-2">
+            <h5 class="text-danger"> Student List</h5>
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gendar</th>
+                            <th scope="col">Blood type</th>
+                            <th scope="col">Mobile</th>
+                            <th scope="col">addr</th>
+                            <th scope="col">city</th>
+                            <th scope="col">province</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let studnet of studentsList">
+                            <td >{{studnet.first_name}}</td>
+                            <td>{{studnet.last_name}}</td>
+                            <td>{{studnet.age}}</td>
+                            <td>{{studnet.gendar}}</td>
+                            <td>{{studnet.btype}}</td>
+                            <td>{{studnet.mobile}}</td>
+                            <td>{{studnet.addr}}</td>
+                            <td>{{studnet.city}}</td>
+                            <td>{{studnet.province}}</td>
+                            <td>
+                                <button class="btn btn-outline-danger" (click)="deleteStudent(studnet)">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
